@@ -1,0 +1,62 @@
+*{
+    color:  white;
+}
+#navbar{
+    border: 2px solid red;
+    width: 90vw;
+    height: 75px;
+    text-align: center;
+    
+    margin: auto;
+    background-color: blue;
+}
+#about{
+    border: 1px solid red;
+    margin: auto;
+    width: 90vw;
+    height: 500px;
+    background-color: navy;
+    text-align: center;
+}
+
+#project{
+    border: 1px solid black;
+    margin: auto;
+    width: 90vw;
+    height: 750px;
+    background-color: navy;
+    text-align: center;
+}
+
+#skill{
+    border: 1px solid red;
+    margin: auto;
+    width: 90vw;
+    height: 500px;
+    background-color: navy;
+    text-align: center;
+}
+
+#contact{
+    border: 1px solid red;
+    margin: auto;
+    width: 90vw;
+    height: 500px;
+    background-color: navy;
+    text-align: center;
+}
+
+/* medium screen */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    #project, #contact, #skill, #about {
+      background-color: black;
+    }
+  }
+
+
+  /* small screen */
+@media all and (min-width: 20px) and (max-width: 767px) {
+    #project, #contact, #skill, #about {
+      background-color: green;
+    }
+  }
