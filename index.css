@@ -1,5 +1,6 @@
 *{
     color:  white;
+    font-family: 'Roboto', sans-serif;
 }
 #navbar{
     border: 2px solid red;
@@ -11,12 +12,69 @@
     background-color: blue;
 }
 #about{
-    border: 1px solid red;
+    /* border: 1px solid rgb(154, 94, 94); */
     margin: auto;
     width: 90vw;
-    height: 500px;
-    background-color: navy;
+    /* height: 500px; */
+    background-color: rgb(154, 94, 94);
     text-align: center;
+    color: black;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+  height: 250px;
+  width: 250px;
+  border-radius: 150px;
+  margin-top: 100px;
+  margin-right: 200px;
+}
+button{
+  background-color: rgb(154, 94, 94);
+  height: 50px;
+  width: 100px;
+  
+}
+p{
+  text-align: center;
+}
+a{
+  font-size: 20px;
+  text-decoration: none;
+}
+.content{
+  padding-top: 100px;
+  padding-left: 200px;
+}
+.content>p{
+  font-size: 20px;
+}
+.content>.name1{
+  font-size: 65px;
+  font-weight:bolder;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.content>.name{
+  font-size: 50px;
+  font-weight:bolder;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+.aboutme{
+  background-color: rgb(154, 94, 94);
+  margin: auto;
+  width: 90vw;
+  text-align: center;
+  
+  margin-top: -25px;
+  padding-bottom: 25px;
+}
+.aboutme>p+p{
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 #project{
@@ -48,9 +106,14 @@
 
 /* medium screen */
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    #project, #contact, #skill, #about {
+    /* #project, #contact, #skill, #about {
       background-color: black;
+    } */
+    #about{
+      display: flex;
+      flex-direction: column;
     }
+
   }
 
 
