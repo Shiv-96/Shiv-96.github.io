@@ -4,13 +4,24 @@
     margin: 0px;
 }
 #navbar{
-    border: 2px solid red;
     width: 90vw;
     height: 75px;
-    text-align: center;
-    
+    display: flex;
+    flex-direction: row-reverse;
     margin: auto;
     background-color: blue;
+}
+#navbar>div{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#navbar>div>a{
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: space-around;
+  /* border: 1px solid red; */
 }
 #about{
     /* border: 1px solid rgb(154, 94, 94); */
@@ -55,23 +66,22 @@ a{
 .content>.name1{
   font-size: 65px;
   font-weight:bolder;
-  /* margin-top: -5px; */
-  /* margin-bottom: -5px; */
 }
 .content>.name{
   font-size: 50px;
   font-weight:bolder;
-  /* margin-top: -5px; */
-  /* margin-bottom: -5px; */
+}
+.content>button{
+  margin-top: 25px;
+  border-radius: 10px;
 }
 .aboutme{
   background-color: rgb(154, 94, 94);
   margin: auto;
   width: 90vw;
   text-align: center;
-  
-  /* margin-top: -25px; */
   padding-bottom: 25px;
+  padding-top: 50px;
 }
 .aboutme>p+p{
   padding-left: 20%;
@@ -84,13 +94,11 @@ a{
   padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 50px;
-  /* margin-top: -20px; */
+  gap: 25px;
 }
 #techStack>div{
   margin-left: 15%;
   
-  /* border: 1px solid red; */
   width: 40%;
   height: 55%;
   padding: 25px;
@@ -98,7 +106,7 @@ a{
 }
 #techStack>div:hover{
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(19, 18, 18, 0.35) 0px 5px 15px;
 }
 #techStack>div>img{
   width: 100%;
@@ -114,11 +122,11 @@ h3{
   margin: auto;
 }
 #project{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: auto;
     width: 90vw;
     height: 750px;
-    background-color: navy;
+    background-color: rgb(154, 94, 94);
     text-align: center;
 }
 
@@ -127,7 +135,7 @@ h3{
     margin: auto;
     width: 90vw;
     height: 500px;
-    background-color: navy;
+    background-color: rgb(154, 94, 94);
     text-align: center;
 }
 
@@ -136,26 +144,69 @@ h3{
     margin: auto;
     width: 90vw;
     height: 500px;
-    background-color: navy;
+    background-color: rgb(154, 94, 94);
     text-align: center;
 }
 
 /* medium screen */
 @media all and (min-width: 768px) and (max-width: 1024px) {
-    /* #project, #contact, #skill, #about {
-      background-color: black;
-    } */
     #about{
       display: flex;
       flex-direction: column;
     }
-
+    #about>.content{
+      align-items: center;
+      padding-left: 0px;
+    }
+    #about>.image{
+      margin: auto;
+    }
+    .image>img{
+      margin: auto;
+      margin-top: 45px;
+    }
+    .aboutme{
+      line-height: 25px;
+    }
+    #techStack{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    #navbar>div{
+      width: 100%;
+    }
   }
 
 
   /* small screen */
 @media all and (min-width: 20px) and (max-width: 767px) {
-    #project, #contact, #skill, #about {
+    /* #project, #contact, #skill, #about {
       background-color: green;
+    } */
+
+    #about{
+      display: flex;
+      flex-direction: column;
+    }
+    #about>.content{
+      align-items: center;
+      padding-left: 0px;
+    }
+    #about>.image{
+      margin: auto;
+    }
+    .image>img{
+      margin: auto;
+      margin-top: 45px;
+    }
+    .aboutme{
+      line-height: 25px;
+    }
+    #techStack{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #navbar>div{
+      width: 100%;
     }
   }
