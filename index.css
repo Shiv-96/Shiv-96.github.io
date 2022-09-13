@@ -1,5 +1,5 @@
 *{
-    color:  white;
+    /* color:  white; */
     font-family: 'Roboto', sans-serif;
     margin: 0px;
 }
@@ -18,16 +18,13 @@
   align-items: center;
 }
 #navbar>div>a{
-  /* display: flex; */
   flex-direction: row;
   justify-content: space-around;
-  /* border: 1px solid red; */
+  color: white;
 }
 #about{
-    /* border: 1px solid rgb(154, 94, 94); */
     margin: auto;
     width: 90vw;
-    /* height: 500px; */
     background-color: rgb(154, 94, 94);
     text-align: center;
     color: black;
@@ -51,6 +48,7 @@ button{
 }
 p{
   text-align: center;
+  color: white;
 }
 a{
   font-size: 20px;
@@ -113,7 +111,7 @@ a{
   height: 75%;
   margin-bottom: 5px;
 }
-h3{
+.aboutme+h3{
   text-align: center;
   color: black;
   font-size: 30px;
@@ -122,7 +120,6 @@ h3{
   margin: auto;
 }
 #project{
-    /* border: 1px solid black; */
     margin: auto;
     width: 90vw;
     height: 750px;
@@ -130,15 +127,38 @@ h3{
     text-align: center;
 }
 
-#skill{
-    border: 1px solid red;
-    margin: auto;
-    width: 90vw;
-    height: 500px;
-    background-color: rgb(154, 94, 94);
-    text-align: center;
+#techStack+h3{
+  color: black;
+  text-align: center;
+  background-color: rgb(154, 94, 94);
+  width: 90vw;
+  margin: auto;
 }
-
+.skill1{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90vw;
+  justify-content: space-around;
+  margin: auto;
+  background-color: rgb(154, 94, 94);
+  padding-top: 25px;
+  text-align: center;
+}
+.skill1>div{
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+}
+.skill1>div>img{
+  width: 80%;
+  height: 70%;
+}
+.skill1>div>h3{
+  background-color: white;
+  color: black;
+  background-color: rgb(154, 94, 94);
+}
 #contact{
     border: 1px solid red;
     margin: auto;
@@ -175,15 +195,14 @@ h3{
     #navbar>div{
       width: 100%;
     }
+    .skill1{
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
 
   /* small screen */
 @media all and (min-width: 20px) and (max-width: 767px) {
-    /* #project, #contact, #skill, #about {
-      background-color: green;
-    } */
-
     #about{
       display: flex;
       flex-direction: column;
@@ -209,4 +228,16 @@ h3{
     #navbar>div{
       width: 100%;
     }
+    .skill1{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .content>.name1{
+      font-size: 35px;
+      font-weight:bolder;
+    }
+    .content>.name{
+      font-size: 25px;
+      font-weight:bolder;
+    }
+
   }
