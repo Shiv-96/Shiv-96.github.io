@@ -119,14 +119,6 @@ a{
   width: 90vw;
   margin: auto;
 }
-#project{
-    margin: auto;
-    width: 90vw;
-    height: 750px;
-    background-color: rgb(154, 94, 94);
-    text-align: center;
-}
-
 #techStack+h3{
   color: black;
   text-align: center;
@@ -158,6 +150,66 @@ a{
   background-color: white;
   color: black;
   background-color: rgb(154, 94, 94);
+}
+#project{
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(154, 94, 94);
+  text-align: center;
+  /* background-color: black; */
+  /* margin: 25px; */
+}
+
+#project>.projectDetails{
+  display: flex;
+  margin: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+}
+.projectDetails>.projectImage{
+  width: 50%;
+}
+.projectImage>img{
+  width: 93%;
+  margin: -30px;
+}
+.zara>img{
+  width: 93%;
+  margin-left: -30px;
+}
+.projectImage+div>h3{
+  color: white;
+}
+.projectImage+div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40%;
+  /* border: 1px solid red; */
+}
+.projectImage+div>div{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+}
+.projectImage+div>div>button{
+  background-color: wheat;
+  font-size: 25px;
+  cursor: pointer;
+  /* width: 100px; */
+}
+button>img{
+  width: 50%;
+  height: 100%;
+}
+.skill1+h2{
+  background-color: rgb(154, 94, 94);
+  text-align: center;
+  width: 90vw;
+  margin: auto;
 }
 #contact{
     border: 1px solid red;
@@ -197,6 +249,27 @@ a{
     }
     .skill1{
       grid-template-columns: repeat(2, 1fr);
+    }
+    .projectDetails{
+      display: flex;
+      flex-direction: column;
+    }
+    .projectDetails>.projectImage {
+      width: 90%;
+    }
+    .projectImage+div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 90%;
+      margin-top: 50px;
+      /* border: 1px solid red; */
+    }
+    .projectImage+div>b{
+      margin-top: 15px;
+    }
+    .projectImage+div>div{
+      margin-top: 15px;
     }
   }
 
