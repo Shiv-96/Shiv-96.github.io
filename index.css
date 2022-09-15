@@ -312,5 +312,25 @@ button>img{
       font-size: 25px;
       font-weight:bolder;
     }
-
+    .projectDetails{
+      display: flex;
+      flex-direction: column;
+    }
+    .projectDetails>.projectImage {
+      width: 90%;
+    }
+    .projectImage+div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 90%;
+      margin-top: 50px;
+      /* border: 1px solid red; */
+    }
+    .projectImage+div>b{
+      margin-top: 15px;
+    }
+    .projectImage+div>div{
+      margin-top: 15px;
+    }
   }
