@@ -219,7 +219,16 @@ button>img{
     background-color: rgb(154, 94, 94);
     text-align: center;
 }
+.calendar{
+  width: 90vw;
 
+}
+#project+h2{
+  background-color: rgb(154, 94, 94);
+  width: 90vw;
+  text-align: center;
+  margin: auto;
+}
 /* medium screen */
 @media all and (min-width: 768px) and (max-width: 1024px) {
     #about{
