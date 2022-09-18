@@ -12,21 +12,48 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
       rel="stylesheet"
     />
+    <!-- CSS of the git hub calender -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
   </head>
   <body>
     <!-- <h1>Hello world</h1> -->
 
     <!-- Navbar section -->
 
-    
     <!-- Home section -->
     <div id="home">
+      <div class="navbar">
+        <nav>
+          <h5>
+            <a href="index.html"><span>S</span>HIV <span>K</span>UMAR</a>
+          </h5>
+          <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <!-- <i class="fa-regular fa-bars"></i> -->
+          <i class="fa-sharp fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+      </div>
       <div class="container box">
         <div>
           <p>Hello, My name is</p>
           <h1>Shiv Kumar</h1>
           <p>And I'm a <span>Full Stack Java Developer</span></p>
-          <a href="Shiv_Kumar_Resume.pdf" download="" type="button" class="resume">Resume</a>
+          <a
+            href="Shiv_Kumar_Resume.pdf"
+            download=""
+            type="button"
+            class="resume"
+            >Resume</a
+          >
         </div>
       </div>
     </div>
@@ -203,6 +230,17 @@
         </div>
       </div>
     </div>
+    <div id="calender">
+      <div class="calenders container">
+        <div class="calenderTitle">
+          <h1 class="title">GITHUB CALENDER</h1>
+        </div>
+        <div class="calendar">
+          <!-- Loading stuff -->
+          Loading the data just for you.
+        </div>
+      </div>
+    </div>
     <div id="contact">
       <div class="contact container">
         <div>
@@ -236,23 +274,33 @@
     </div>
     <div id="footer">
       <div class="footer container">
-        <div class="note"><h1><span>S</span>HIV <span>K</span>UMAR</h1></div>
+        <div class="note">
+          <h1><span>S</span>HIV <span>K</span>UMAR</h1>
+        </div>
         <p>contact me</p>
         <div class="footerItem">
           <div class="contactBox">
-            <a href="tel:+917050753895"><img src="phone.png" alt=""></a>
+            <a href="tel:+917050753895"><img src="phone.png" alt="" /></a>
           </div>
           <div class="contactBox">
-            <a href="https://wa.me/7050753895"><img src="whatsapp.png" alt=""></a>
+            <a href="https://wa.me/7050753895"
+              ><img src="whatsapp.png" alt=""
+            /></a>
           </div>
           <div class="contactBox">
-            <a href="mailto:kshiv.dot@gmail.com"><img src="mail.png" alt=""></a>
+            <a href="mailto:kshiv.dot@gmail.com"
+              ><img src="mail.png" alt=""
+            /></a>
           </div>
           <div class="contactBox">
-            <a href="https://www.linkedin.com/in/shiv-kumar-355a83216/"><img src="linkedin.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/shiv-kumar-355a83216/"
+              ><img src="linkedin.png" alt=""
+            /></a>
           </div>
           <div class="contactBox">
-            <a href="https://github.com/Shiv-96"><img src="github.png" alt=""></a>
+            <a href="https://github.com/Shiv-96"
+              ><img src="github.png" alt=""
+            /></a>
           </div>
         </div>
       </div>
@@ -273,5 +321,35 @@
     window.location.href =
       "https://github.com/Shiv-96/WEB-18-ZARA.COM-CLONE-WEBSITE-";
   }
-  
+</script>
+<script
+  src="https://kit.fontawesome.com/d319f1b537.js"
+  crossorigin="anonymous"
+></script>
+<script>
+  let menu = document.querySelector("#menu");
+
+  function openMenu() {
+    menu.style.right = "0";
+  }
+  function closeMenu() {
+    menu.style.right = "-200px";
+  }
+</script>
+<!-- library for the git hub calender -->
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+<!-- functionality of git hub calender -->
+<script>
+  GitHubCalendar(".calendar", "Shiv-96");
+
+  // or enable responsive functionality:
+  GitHubCalendar(".calendar", "Shiv-96", { responsive: true });
+
+  // Use a proxy
+  GitHubCalendar(".calendar", "Shiv-96", {
+    proxy(username) {
+      return fetch(`https://your-proxy.com/github?user=${username}`);
+    },
+  }).then((r) => r.text());
 </script>
