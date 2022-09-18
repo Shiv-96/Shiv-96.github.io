@@ -1,0 +1,555 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.note h1{
+  color: white;
+  font-size: 25px;
+}
+.note span{
+  color: red;
+  font-size: 25px;
+}
+.note a{
+  font-size: 25px;
+  color: white;
+}
+
+#home{
+  background-image: url(./portfolio-bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+#home::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: -7;
+  z-index: -1;
+}
+#home p{
+  display: block;
+  width: fit-content;
+  font-size: 15px;
+  position: relative;
+  color: white;
+}
+p span{
+  color: red;
+  font-size: 20px;
+}
+#home h1{
+  display: block;
+  width: fit-content;
+  font-size: 30px;
+  position: relative;
+  color: white;
+}
+#home .box{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#home .resume{
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(179, 51, 51);
+  font-size: 15px;
+  margin-top: 30px;
+  transition: .3s;
+}
+#home .resume:hover{
+  color: white;
+  background-color: rgb(179, 51, 51);
+}
+
+#about .about{
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+
+}
+#about .left{
+  width: 250px;
+  height: 360px;
+}
+#about .right{
+  width: 100%;
+}
+#about .right h3{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#about .right p{
+  margin-bottom: 20px;
+}
+#about .resume{
+  display: inline-block;
+  padding: 10px;
+  color: black;
+  background-color: transparent;
+  border: 2px solid rgb(179, 51, 51);
+  font-size: 15px;
+  margin-top: 30px;
+  transition: .3s;
+  margin-bottom: 30px;
+
+}
+#about .resume:hover{
+  color: white;
+  background-color: rgb(179, 51, 51);
+}
+#about .left .aboutImage img{
+  width: 100%;
+  width: 100%;
+
+}
+#about .left .aboutImage{
+  box-shadow: rgb(255 255 255) 10px -10px 0px -3px, rgb(193, 27, 27) 10px -10px;
+}
+ 
+#skill button{
+  height: 50px;
+  width: 150px;
+  margin-left: 50px;
+  margin-top: 25px;
+}
+#skill .skill{
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+
+}
+.skill-bottom{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 50%;
+  margin-top: 50px;
+  /* background-color: gray; */
+  /* border: 1px solid red; */
+
+}
+.skill-bottom > .skill-item{
+  height: 150px;
+  width: 120px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+  /* border: 1px solid blue; */
+}
+.skill-bottom > .skill-item:hover{
+  /* background-color: gray; */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* padding: 0px; */
+}
+
+.skill-bottom > .skill-item > .icon{
+  margin-bottom: 25px;
+}
+.skill-bottom > .skill-item > .icon>img{
+  height: 50%;
+  width: 50%;
+  margin-top: 25px;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#projects .projects{
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#projects .projecttitle h1{
+  margin-bottom: 40px;
+}
+#projects .project{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#projects .projectName{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#projects .details{
+  padding: 30px;
+  flex-basis: 50%;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+  line-height: 30px;
+}
+#projects .details h2{
+  font-size: 25px;
+  font-weight: 800;
+  margin: auto;
+  
+}
+#projects .details p{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin: auto;
+}
+#projects .details h3{
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  margin: auto;
+}
+#projects .details .button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-top: 10px;
+}
+#projects .details .button button{
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+  padding-top: -35px;
+}
+#projects .details .button button+button{
+  background-color: red;
+  color: white;
+  font-size: 20px;
+}
+#projects .details .button button img{
+  height: 100%;
+}
+#projects .image img{
+  width: 100%;
+  height: 100%;
+}
+#projects .image{
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+#projects .image::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: .7;
+}
+#projects .image img{
+  transition: .3s ease transform;
+}
+#projects .projectName:hover .image img{
+  transform: scale(1.2);
+}
+
+#contact .contact{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#contact .contactItems{
+  width: 250px;
+}
+#contact .contactItem{
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: .3s ease box-shadow;
+}
+#contact .contactItem:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#contact .icon{
+  width: 100px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  margin-bottom: 10px;
+  /* margin-left: 50px; */
+}
+#contact .contactInfo h3{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+#contact .contactInfo p{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#footer{
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer{
+  min-height: 200px;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+#footer p{
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#footer .footerItem{
+  display: flex;
+  margin-bottom: 30px;
+}
+#footer .contactBox img{
+  height: 100%;
+  width: 100%;
+}
+#footer .contactBox{
+  height: 45px;
+  width: 45px;
+  margin: 0 5px;
+}
+
+/* big screen */
+@media all and (min-width: 1025px) {
+  #about .about{
+    flex-direction: row;
+  }
+  #about .left{
+    width: 600px;
+    height: 400px;
+    padding-left: 50px;
+  }
+  #about .about .left .aboutImage::after{
+    left: -45px;
+    top: 30px;
+    height: 95%;
+    width: 95%;
+  }
+  
+  #about .title{
+    text-align: left;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+  }
+  #about .title h3{
+    font-weight: 500;
+  }
+  #about .title p{
+    color: gray;
+  }
+  #contact .contact{
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+  }
+  #contact .contactItems{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 0;
+  }
+  #contact .contactItem{
+    margin: 20px;
+  }
+  #projects .projectName{
+    flex-direction: row;
+    /* margin-top: 25px; */
+  }
+  #projects .projectName{
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 25px;
+    border-radius: 20px;
+  }
+  #projects .project .details{
+    height: 100%;
+  }
+  #projects .project .image{
+    height: 100%;
+  }
+  .skill-bottom{
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 20px; */
+    width: 70%;
+    margin-top: 50px;
+    padding-bottom: 25px;
+  }
+}
+  
+/* Medium screen */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .resume{
+    font-size: 300px;
+    padding: 20px 60px;
+  }
+  #home h1{
+    font-size: 50px;
+  }
+  .skill-bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 50%;
+    margin-top: 50px;
+    padding-bottom: 25px;
+  }
+  #projects .projectName{
+    flex-direction: row;
+    font-size: 10px;
+    /* margin-top: 25px; */
+  }
+  #projects .projectName{
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    margin-top: 25px;
+    
+  }
+  #projects .project .details{
+    height: 100%;
+    
+  }
+  #projects .project .image{
+    height: 100%;
+  }
+  #about .about{
+    flex-direction: row;
+  }
+  #about .left{
+    width: 600px;
+    height: 400px;
+    padding-left: 50px;
+  }
+  #about .about .left .aboutImage::after{
+    left: -45px;
+    top: 30px;
+    height: 95%;
+    width: 95%;
+  }
+  
+  #about .title{
+    text-align: left;
+    padding: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+  }
+  #about .title h3{
+    font-weight: 500;
+  }
+  #about .title p{
+    color: gray;
+  }
+  #contact .contact{
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+  }
+  #contact .contactItems{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 0;
+  }
+  #contact .contactItem{
+    margin: 20px;
+  }
+  
+  
+}
+@media all and (min-width: 25px) and (max-width: 767px){
+  .skill-bottom{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 70%;
+    margin-top: 50px;
+    padding-bottom: 25px;
+  }
+  #about .title{
+    margin: auto;
+    padding: 50px;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+  }
+  #about .title h3{
+    font-weight: 500;
+  }
+}
