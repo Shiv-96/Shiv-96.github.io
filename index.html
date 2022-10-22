@@ -23,25 +23,44 @@
 
     <!-- Navbar section -->
 
+    <div id="navbar">
+      <div id="name_image">
+        <p>Shiv Kumar</p>
+      </div>
+      <div id="tabs">
+        <div><a href="#home">HOME</a></div>
+        <div><a href="#about">ABOUT</a></div>
+        <div><a href="#projects">PROJECTS</a></div>
+        <div><a href="#skill">Skill</a></div>
+        <div><a href="#contact">CONTACT</a></div>
+        <div>
+          <a
+            target=”_blank”,
+            href="https://drive.google.com/file/d/1MYNd24ohnsN8qGSlVuPpJP1EYnzP6D1W/view"
+            >RESUME</a
+          >
+        </div>
+        <div id="dropdown">
+          <i class="fa-solid fa-bars fa-2x" id="bar"></i>
+          <i class="fa-solid fa-xmark fa-2x" id="cross"></i>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <hr />
+      <a href="#home">HOME</a>
+      <hr />
+      <a href="#about">ABOUT</a>
+      <hr />
+      <a href="#projects">PROJECTS</a>
+      <hr />
+      <a href="#skill">Skill</a>
+      <a href="#contact">CONTACT</a>
+      <hr />
+    </div>
+
     <!-- Home section -->
     <div id="home">
-      <div class="navbar">
-        <nav>
-          <h5>
-            <a href="index.html"><span>S</span>HIV <span>K</span>UMAR</a>
-          </h5>
-          <ul id="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skill">Skill</a></li>
-            <li><a href="#projects">Project</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-          </ul>
-          <!-- <i class="fa-regular fa-bars"></i> -->
-          <i class="fa-sharp fa-solid fa-bars" onclick="openMenu()"></i>
-        </nav>
-      </div>
       <div class="container box">
         <div>
           <p>Hello, My name is</p>
@@ -345,11 +364,4 @@
 
   // or enable responsive functionality:
   GitHubCalendar(".calendar", "Shiv-96", { responsive: true });
-
-  // Use a proxy
-  GitHubCalendar(".calendar", "Shiv-96", {
-    proxy(username) {
-      return fetch(`https://your-proxy.com/github?user=${username}`);
-    },
-  }).then((r) => r.text());
 </script>
