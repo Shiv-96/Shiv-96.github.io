@@ -30,61 +30,61 @@ a{
   font-size: 25px;
   color: white;
 }
-
-#navbar{
-  position: sticky;
-  top: 0;
+header{
   z-index: 999;
-  background-color: #fbfbfc;    
-  width:100%;
-  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 1.5;   
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    
+  padding: 20px 100px;
+  background: transparent;
 }
-#name_image{ 
-  width: 20%;   
-  display: flex;   
-  gap: 10px;
-  align-items: center;
-  font-size: 16px;
+header.sticky{
+  /* background: black; */
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  
+  padding: 15px 100px;
+}
+.brand span{
+  color: crimson;
+}
+header .brand{
+  color: #fff;
+  font-size: 20px;
   font-weight: 700;
-  /* border: 1px solid black; */
-}
-
-#name_image > div{    
-  width: 20%;
-  /* height: 10%; */
-  display: flex;
-  justify-content:flex-end;
-  /* border: 1px solid black; */
-}
-#name_image>div>img{
-  width: 100%;
-  border-radius: 100%;
-}
-#tabs{
-  display: flex;
-  width: 40%;
-  justify-content: space-around;
-  font-size: 13px;
-  font-weight: 700;
-}
-#tabs>div>a:hover,
-#name_image>p:hover{
-  color: #0fcbfa;
-}
-#tabs>div>a{
   text-decoration: none;
-  color: black;
+  letter-spacing: 2px;
 }
-#dropdown,
-#content{
+header .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 25%; */
+}
+header .menu a{
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+header .menu a:hover{
+  color: rgb(179, 51, 51);
+}
+header .btn{
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
   display: none;
 }
-
 #home{
   background-image: url(./portfolio-bg.jpg);
   background-size: cover;
@@ -511,6 +511,39 @@ nav fa-solid{
   
 /* Medium screen */
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+/* Navbar */
+
+  header .btn{
+    display: block;
+  }
+  header .menu{
+    position: fixed;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    
+    flex-direction: column;
+    min-width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+  header .menu.active{
+    right: 0;
+  }
+  header .menu .close-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+  header .menu a{
+    display: block;
+    font-size: 20px;
+    padding: 15px 15px;
+
+  }
   .resume{
     font-size: 300px;
     padding: 20px 60px;
@@ -595,29 +628,6 @@ nav fa-solid{
     margin: 20px;
   }
   
-  #name_image{ 
-    width: 40%;              
-    gap: 10px;          
-    font-weight: 600;        
-} 
-#name_image > div{    
-    width: 15%;
-    /* height: 10%; */
-    display: flex;
-    justify-content:flex-end;
-    /* border: 1px solid black; */
-} 
-#tabs{
-    width: 50%;        
-    font-weight: 600;
-}    
-#landscape{        
-    height: 80vh;    
-}    
-#name_tag{       
-    font-size: 45px;
-    font-weight:900;        
-}
 
 }
 @media all and (max-width: 767px){
@@ -640,62 +650,5 @@ nav fa-solid{
   #about .title h3{
     font-weight: 500;
   }
-
-  #navbar{
-    padding-right: 0;
-}
-#name_image{ 
-    width: 70%;  
-}
-#name_image > div{    
-    width: 20%;
-}  
-#name_image>p{
-    font-size: 14px;
-}  
-#tabs>div{
-    display: none;
-}
-#tabs>div:last-child{
-    display: flex;        
-    cursor: pointer;
-    position: relative;  
-    justify-content: flex-end;     
-    /* padding-right: 10px; */
-    /* border: 1px solid ; */
-    width: 100%;   
-    z-index: 1;       
-}
-#tabs>div:last-child>i{
-    margin-right: 10px; 
-    font-weight: 00;       
-} 
-#cross{
-    display: none;
-}   
-#content{
-    position: absolute; 
-    position: fixed;
-    z-index: 1;         
-    display: none; 
-    width: 100%;        
-    flex-direction: column;
-    text-align: right;         
-    font-size: 12px;
-    font-weight: 600;
-    gap: 20px;
-    background-color: rgb(255, 252, 252);
-    right: 0;
-    box-shadow: #facf0f(17, 12, 46, 0.15) ;             
-}
-#content>a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-}
-#content a:hover{
-    color: #facf0f;        
-}
-
-
+  
 }

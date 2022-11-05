@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
       rel="stylesheet"
@@ -19,45 +20,25 @@
     />
   </head>
   <body>
-    <!-- <h1>Hello world</h1> -->
-
     <!-- Navbar section -->
 
-    <div id="navbar">
-      <div id="name_image">
-        <p>Shiv Kumar</p>
-      </div>
-      <div id="tabs">
-        <div><a href="#home">HOME</a></div>
-        <div><a href="#about">ABOUT</a></div>
-        <div><a href="#projects">PROJECTS</a></div>
-        <div><a href="#skill">Skill</a></div>
-        <div><a href="#contact">CONTACT</a></div>
-        <div>
-          <a
-            target=”_blank”,
-            href="https://drive.google.com/file/d/1MYNd24ohnsN8qGSlVuPpJP1EYnzP6D1W/view"
-            >RESUME</a
-          >
+    <header>
+      <a href="#" class="brand"><span>S</span>HIV <span>K</span>UMAR</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
         </div>
-        <div id="dropdown">
-          <i class="fa-solid fa-bars fa-2x" id="bar"></i>
-          <i class="fa-solid fa-xmark fa-2x" id="cross"></i>
-        </div>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">PROJECT</a>
+        <a href="#">SKILL</a>
+        <a href="#">CONTACT</a>
+        <a href="#">RESUME</a>
       </div>
-    </div>
-    <div id="content">
-      <hr />
-      <a href="#home">HOME</a>
-      <hr />
-      <a href="#about">ABOUT</a>
-      <hr />
-      <a href="#projects">PROJECTS</a>
-      <hr />
-      <a href="#skill">Skill</a>
-      <a href="#contact">CONTACT</a>
-      <hr />
-    </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
 
     <!-- Home section -->
     <div id="home">
@@ -364,4 +345,23 @@
 
   // or enable responsive functionality:
   GitHubCalendar(".calendar", "Shiv-96", { responsive: true });
+</script>
+<script type="text/javascript">
+  window.addEventListener("scroll", function(){
+
+    var header = document.querySelector("header");
+    header.classList.toggle('sticky', window.scrollY > 0);
+  
+  })
+
+  var menue = document.querySelector(".menu");
+  var menuBtn = document.querySelector(".menu-btn");
+  var closeBtn = document.querySelector(".close-btn");
+
+  menuBtn.addEventListener("click", () => {
+    menue.classList.add("active");
+  })
+  closeBtn.addEventListener("click", () => {
+    menue.classList.remove("active")
+  })
 </script>
