@@ -25,3 +25,11 @@ menu_item.forEach(item => {
     })
 
 })
+
+// Typing animation
+var typed = new Typed(".typing2",{
+    strings: ["Full Stack Java Developer", "Backend Developer","Java Developer"],
+    typeSpeed:100,
+    backSpeed:60,
+    loop: true
+});

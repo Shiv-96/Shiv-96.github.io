@@ -18,6 +18,7 @@ a{
   justify-content: center;
 }
 
+
 /* Header Section Starts */
 
 #header{
@@ -168,28 +169,34 @@ a{
   display: flex;
   margin: auto;
 }
+.box{
+
+}
 #hero h1{
   display: block;
   width: fit-content;
-  font-size: 35px;
+  font-size: 45px;
   position: relative;
   margin: auto;
   margin-top: 15px;
-  color: transparent;
-  animation: text_reveal .5s ease forwards;
-  animation-delay: 1s;
+  color: #fff;
 }
-#hero h3{
-  display: block;
+#hero .box{
+  display: flex;
   width: fit-content;
   font-size: 20px;
   position: relative;
   margin: auto;
-  color: transparent;
+  font-size: 35px;
+  color: crimson;
   margin-top: 15px;
-  animation: text_reveal .5s ease forwards;
-  animation: text_reveal_name .5s ease forwards;
-  animation-delay: 2s;
+}
+.box .h3{
+  color: #fff;
+  margin-right: 7.5px;
+}
+.typing2{
+  display: inline-block;
 }
 #hero h1 span, #hero h3 span{
   position: absolute;
@@ -198,15 +205,6 @@ a{
   height: 100%;
   width: 0;
   background-color: crimson;
-  animation: text_reveal_box 1s ease;
-  animation-delay: 0.5s;
-}
-#hero h1 span{
-  animation-delay: 0.5s;
- 
-}
-#hero h3 span{
-  animation-delay: 1.5s;
 }
 #hero .cta{
   padding: 10px 30px;
@@ -228,7 +226,7 @@ a{
 /* Home section ends */
 /* Text Transform  starts*/
 
-@keyframes text_reveal_box{
+/* @keyframes text_reveal_box{
   50%{
     width: 100%;
     left: 0;
@@ -237,19 +235,19 @@ a{
     width: 0;
     left: 100%;
   }
-}
-@keyframes text_reveal{
+} */
+/* @keyframes text_reveal{
   100%{
     color: #fff;
   }
-}
-@keyframes text_reveal_name{
+} */
+/* @keyframes text_reveal_name{
   100%{
     color: crimson;
     
   }
   
-}
+} */
 /* Text Transform ends */
 
 /* Media Quesries for desktop */
