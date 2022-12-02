@@ -169,9 +169,6 @@ a{
   display: flex;
   margin: auto;
 }
-.box{
-
-}
 #hero h1{
   display: block;
   width: fit-content;
@@ -224,32 +221,127 @@ a{
   background-color: crimson;
 }
 /* Home section ends */
-/* Text Transform  starts*/
+/* About Section Starts */
 
-/* @keyframes text_reveal_box{
-  50%{
-    width: 100%;
-    left: 0;
-  }
-  100%{
-    width: 0;
-    left: 100%;
-  }
+/* .container1{
+  width: 70vw;
+  height: 100vh;
+  margin: auto;
+}
+#about{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+h1{
+  text-align: center;
+  font-size: 35px;
+}
+h1 span{
+  border-bottom: 1px dashed black;
+  padding: 5px 15px;
+}
+.left{
+  border: 10px solid grey;
+  width: 25%;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+}
+.left .logo{
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 65px;
+  margin-top: -250px;
+}
+.left .logo a{
+  color: black;
+}
+.left .logo a:hover{
+  color: coral;
+}
+.left i{
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.right{
+  width: 60%;
+  padding: 50px ;
+  padding-top: 0px;
+}
+.right h2{
+  font-size: 40px;
+  font-weight: 600;
+}
+.right h4{
+  font-size: 30px;
+  font-weight: 500;
+}
+.right p{
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-align: justify;
 } */
-/* @keyframes text_reveal{
-  100%{
-    color: #fff;
-  }
-} */
-/* @keyframes text_reveal_name{
-  100%{
-    color: crimson;
-    
-  }
+.about h1{
+  text-align: center;
+  font-size: 35px;
+}
+.about h1 span{
+  border-bottom: 1px dashed black;
+  padding: 5px 15px;
+}
+#about{
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.left{
+  /* border: 1px solid red; */
+  width: 25%;
+  padding: 20px;
+  background-color: rgb(198, 207, 214);
+}
+.left h2{
+  padding-bottom: 10px;
+  border-bottom: 1px dashed grey;
+  margin-bottom: 10px;
+}
+.left p{
+  line-height: 20px;
+}
+.right{
+  border: 1px solid red;
+  width: 75%;
+  padding: 10px;
+}
+/* Typing animation */
+
+.right .box{
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  margin: auto;
+  font-size: 20px;
+  color: crimson;
+  margin-top: 15px;
+}
+.right .box .h3{
+  color: black;
   
-} */
-/* Text Transform ends */
-
+}
+.right .typing2{
+  display: inline-block;
+}
+.right p{
+  text-align: justify;
+  font-size: 17px;
+  margin-top: 45px;
+}
+/* About Section Ends */
 /* Media Quesries for desktop */
 @media only screen and (min-width: 1200px){
 

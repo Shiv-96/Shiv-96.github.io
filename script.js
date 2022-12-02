@@ -33,3 +33,9 @@ var typed = new Typed(".typing2",{
     backSpeed:60,
     loop: true
 });
+var typed = new Typed(".typing",{
+    strings: ["Full Stack Java Developer", "Backend Developer","Java Developer"],
+    typeSpeed:100,
+    backSpeed:60,
+    loop: true
+});
