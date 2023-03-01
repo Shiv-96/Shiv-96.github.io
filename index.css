@@ -631,6 +631,20 @@ a {
 /* Project starts */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  #hero img{
+    height: 200px;
+    width: 200px;
+  }
+
+  #hero h1{
+    font-size: 35px;
+  }
+
+  #hero .box{
+    font-size: 25px;
+  }
+
   .skills-list {
     width: 80vw;
   }
@@ -695,6 +709,21 @@ a {
 /* Project Ends */
 
 @media all and (max-width: 767px) {
+
+  #hero img{
+    height: 150px;
+    width: 150px;
+  }
+
+  #hero h1{
+    font-size: 30px;
+  }
+
+  #hero .box{
+    font-size: 20px;
+  }
+
+
   .skill-bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -774,7 +803,7 @@ a {
   }
 }
 
-@media all and (min-width: 350px) and (max-width: 600px) {
+@media all and (max-width: 600px) {
   .skills-list {
     width: 90vw;
   }
