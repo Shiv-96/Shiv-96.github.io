@@ -718,3 +718,68 @@ a{
 
 
 /* Media Queries for medium screen */
+
+/* github stats */
+
+#git-stat-3{
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#con1>img, #con2>img{
+  height: 200px;
+  width: 500px;
+  margin-left: -5px;
+
+}
+#stat-new{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+#con3>img{
+  height: 200px;
+}
+@media all and (min-width :600px) and (max-width : 811px){
+  #git-stat-3{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    align-items: center;
+  }
+  #con1>img, #con2>img, #con3>img{
+    width: 400px;
+  }
+  #stat-new{
+    margin-top: -10px;
+  }
+
+}
+
+@media all and (min-width :350px) and (max-width : 600px){
+
+  #git-stat-3{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 10px; */
+    align-items: center;
+  }
+  #con1>img, #con2>img{
+    width: 300px;
+    margin-left: 20px;
+  }
+  #con3>img{
+    width: 300px;
+  }
+  #stat-new{
+    margin-top: -70px;
+  }
+}
