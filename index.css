@@ -289,53 +289,72 @@ a{
 
 /* Skill section starts */
 
-#skill .skill-bottom{
-  height: 50px;
-  width: 150px;
-  margin-left: 50px;
-  margin-top: 25px;
-}
-#skill .skill{
-  flex-direction: column;
-  text-align: center;
-  max-width: 1500px;
 
+
+.skills{
+  color:#000;
+  background: #fff;
+  
+  margin-top: 90px;
 }
-.container{
-  margin: auto;
+.skills .title::before{
+  background: #fff;
 }
-.skill{
-  width: 70%;
+.skills .title::after{
+  background: #111;
 }
-.skill-bottom{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 100px;
-  width: 50%;
+
+
+.skills .title{
   margin-top: 50px;
-  justify-content: space-around;
-
-}
-.skill-bottom > .skill-item{
-  height: 150px;
-  width: 120px;
-  padding: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  border-radius: 10px;
-}
-.skill-bottom > .skill-item:hover{
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
 }
 
-.skill-bottom > .skill-item > .icon{
-  margin-bottom: 25px;
+
+#skills{
+  padding: 30px 0;
 }
-.skill-bottom > .skill-item > .icon>img{
-  height: 50%;
-  width: 50%;
-  margin-top: 25px;
+.skills-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap:40px;
+  margin-top: 50px;
+  width: 75vw;
+  margin: auto;
+  margin-top: 20px;
 }
+.skills-list div{
+  background-image: linear-gradient(60deg, #55667a 0%, #485563 100%);
+  padding: 40px ;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.skills-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.skills-list div h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.skills-list div a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display:inline-block ;
+}
+.skills-list div:hover{
+  background-color: gold;
+  text-align: center;
+  color: #ff004f;
+  transform: translateY(-10px);
+}
+
 
 /* Skill section ends */
 
@@ -560,6 +579,7 @@ a{
     display: none;
   }
   /* End of Header */
+
 /* Project Starts */
 
 #projects .projectName{
@@ -620,39 +640,35 @@ a{
 @media only screen and (min-width: 768px) and (max-width: 1024px){
 
 
-  .skill-bottom{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 50%;
-    margin-top: 50px;
-    padding-bottom: 25px;
+  .skills-list{
+    width: 80vw;
   }
 
   #projects .projectName{
-    flex-direction: row;
+    flex-direction: column;
     font-size: 10px;
     /* margin-top: 25px; */
   }
   #projects .projectName{
-    height: 400px;
+    height: 600px;
     margin: 0;
     width: 100%;
     border-radius: 0;
     margin-top: 25px;
-    
+    border: 1px solid red;
   }
   #projects .project{
-    width: 80vw;
+    width: 100vw;
   }
   #projects .project .details{
     height: 100%;
     
   }
   #projects .project .image{
+    width: 100%;
     height: 100%;
   }
-
+  
   #contact .contact{
     flex-direction: column;
     padding: 100px 0;
@@ -702,6 +718,7 @@ a{
   #about{
     display: flex;
     flex-direction: column;
+    width: 80vw;
   }
   .left{
     width: 100%;
@@ -714,10 +731,14 @@ a{
     padding: 10px;
     /* padding-left: 50px; */
   }
+  #project .project{
+    border: 1px solid red;
+    width: 90%;
+  }
 }
 
 
-/* Media Queries for medium screen */
+
 
 /* github stats */
 
@@ -729,7 +750,11 @@ a{
   align-items: center;
   margin-top: 20px;
 }
-
+#git-stat-3 #con1,
+#git-stat-3 #con2{
+  display: flex;
+  justify-content: center;
+}
 #con1>img, #con2>img{
   height: 200px;
   width: 500px;
@@ -737,13 +762,16 @@ a{
 
 }
 #stat-new{
-  margin-top: 20px;
   display: flex;
   justify-content: center;
+  margin-left: 20px;
 }
 #con3>img{
   height: 200px;
 }
+
+/* Media Queries for medium screen */
+
 @media all and (min-width :600px) and (max-width : 811px){
   #git-stat-3{
     width: 50%;
@@ -759,10 +787,14 @@ a{
   #stat-new{
     margin-top: -10px;
   }
-
+  
 }
 
 @media all and (min-width :350px) and (max-width : 600px){
+
+  .skills-list{
+    width: 90vw;
+  }
 
   #git-stat-3{
     width: 90%;
