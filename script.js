@@ -39,3 +39,7 @@ var typed = new Typed(".typing",{
     backSpeed:60,
     loop: true
 });
+
+function openNewWindow(){
+    window.open('https://drive.google.com/file/d/1MYNd24ohnsN8qGSlVuPpJP1EYnzP6D1W/view');
+}
