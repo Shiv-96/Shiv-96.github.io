@@ -41,6 +41,6 @@ var typed = new Typed(".typing", {
 
 function openNewWindow() {
   window.open(
-    "https://drive.google.com/file/d/1snqPuvqv_O1PnpkswCy-5pDAzc1y4P9T/view?usp=sharing"
+    "https://drive.google.com/file/d/1W5wAffr_Vpq6BWsfG6bJdcATeL78mRwV/view?usp=sharing"
   );
 }
