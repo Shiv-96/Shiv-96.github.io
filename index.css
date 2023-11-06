@@ -404,13 +404,13 @@ a {
   line-height: 30px;
 }
 #projects .details h2 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 800;
   margin: auto;
 }
 #projects .details p {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   margin-top: 10px;
   margin: auto;
@@ -561,10 +561,9 @@ a {
 
 /* Footer section ends */
 
-/* Media Quesries for desktop */
+/* Media Quesries for desktop start */
 @media only screen and (min-width: 1200px) {
   /* Start of Header */
-
   #header .list {
     display: none;
   }
@@ -585,9 +584,9 @@ a {
 
   /* Project Starts */
 
-  #projects .projectName {
-    flex-direction: row;
-  }
+  /* #projects .projectName {
+    
+  } */
   #projects .projectName {
     height: 400px;
     margin: 0;
@@ -595,6 +594,7 @@ a {
     border-radius: 0;
     margin-top: 25px;
     border-radius: 20px;
+    flex-direction: row;
   }
   #projects .project .details {
     height: 100%;
@@ -628,17 +628,99 @@ a {
     flex-direction: row;
     /* margin-top: 25px; */
   }
-
   /* Contact me section ends */
+
+  #con1 > img,
+  #con2 > img,
+  #con3 > img {
+    width: 400px;
+  }
+  #stat-new {
+    margin-top: -10px;
+  }
+  #git-stat-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    align-items: center;
+    
+  }
+  #git-stat-3 #con1,
+  #git-stat-3 #con2 {
+    display: flex;
+    justify-content: center;
+    
+  }
+  #con1 > img,
+  #con2 > img {
+    height: 200px;
+    width: 500px;
+    margin-left: -5px;
+  }
+  #stat-new {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  #con3 > img {
+    height: 500px;
+    width: 500px;
+  }
+
 }
 
-/* Media Quesries for desktop */
+/* Media Quesries for desktop end */
 
-/* Media Queries for medium screen */
+/* Media Queries for medium screen start */
 
-/* Project starts */
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+  #con1 > img,
+  #con2 > img,
+  #con3 > img {
+    width: 400px;
+  }
+  #stat-new {
+    margin-top: -10px;
+  }
+  #git-stat-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    align-items: center;
+  }
+  #git-stat-3 #con1,
+  #git-stat-3 #con2 {
+    display: flex;
+    justify-content: center;
+  }
+  #con1 > img,
+  #con2 > img {
+    height: 200px;
+    width: 500px;
+    margin-left: -5px;
+  }
+  #stat-new {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  #con3 > img {
+    height: 200px;
+  }
 
   #hero img{
     height: 200px;
@@ -656,18 +738,14 @@ a {
   .skills-list {
     width: 80vw;
   }
-
-  #projects .projectName {
-    flex-direction: column;
-    font-size: 10px;
-    /* margin-top: 25px; */
-  }
   #projects .projectName {
     height: 600px;
     margin: 0;
     width: 90%;
     border-radius: 10px;
     margin-top: 25px;
+    flex-direction: column;
+    font-size: 10px;
   }
   #projects .project {
     width: 100vw;
@@ -679,7 +757,10 @@ a {
     width: 100%;
     height: 100%;
   }
-
+  #projects .details h2{
+    font-size: 25px;
+    color:red;
+  }
   #contact .contact {
     flex-direction: column;
     padding: 100px 0;
@@ -714,9 +795,68 @@ a {
   }
 }
 
-/* Project Ends */
+/* @media all and (max-width: 800px) { */
 
-@media all and (max-width: 767px) {
+  
+
+/* Media Queries for medium screen */
+
+@media all and (min-width: 600px) and (max-width: 800px) {
+  /* github stats */
+  
+  #con1 > img,
+  #con2 > img,
+  #con3 > img {
+    width: 400px;
+  }
+  #stat-new {
+    margin-top: -10px;
+  }
+  #git-stat-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    align-items: center;
+  }
+  #git-stat-3 #con1,
+  #git-stat-3 #con2 {
+    display: flex;
+    justify-content: center;
+  }
+  #con1 > img,
+  #con2 > img {
+    height: 200px;
+    width: 500px;
+    margin-left: -5px;
+  }
+  #stat-new {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  #con3 > img {
+    height: 200px;
+  }
+  /* github stats */
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90vw;
+  }
+  .skill-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 70%;
+    margin-top: 50px;
+    padding-bottom: 25px;
+  }
 
   #hero img{
     height: 150px;
@@ -725,6 +865,99 @@ a {
 
   #hero h1{
     font-size: 30px;
+  }
+
+  #hero .box{
+    font-size: 20px;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .left {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(198, 207, 214);
+  }
+  .right {
+    margin-top: 0px;
+    width: 100%;
+    padding: 10px;
+    /* padding-left: 50px; */
+  }
+  #projects .project {
+    width: 100%;
+  }
+  #projects .details h2{
+    color: red;
+    font-size: 20px;
+  }
+}
+
+
+  
+/* } */
+
+@media all and (min-width: 300px) and (max-width: 600px) {
+
+  .skill-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 70%;
+    margin-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .skills-list {
+    /* grid-template-columns: repeat(2, 1fr); */
+    width: 90vw;
+  }
+  #projects a{
+    margin-left: 15px;
+    padding: 20px;
+  }
+  #git-stat-3 #con1,
+  #git-stat-3 #con2 {
+    display: flex;
+    justify-content: center;
+  }
+  #con1 > img,
+  #con2 > img {
+    height: 200px;
+    width: 300px;
+    margin-left: -5px;
+  }
+  #stat-new {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  #con3 > img {
+    height: 200px;
+    width: 300px;
+  }
+  #git-stat-3 {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  #stat-new {
+    margin-top: -70px;
+  }
+  #hero img{
+    height: 150px;
+    width: 150px;
+  }
+
+  #hero h1{
+    font-size: 20px;
   }
 
   #hero .box{
@@ -752,101 +985,117 @@ a {
   #projects .project {
     width: 100%;
   }
-}
-
-/* github stats */
-
-#git-stat-3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
-}
-#git-stat-3 #con1,
-#git-stat-3 #con2 {
-  display: flex;
-  justify-content: center;
-}
-#con1 > img,
-#con2 > img {
-  height: 200px;
-  width: 500px;
-  margin-left: -5px;
-}
-#stat-new {
-  display: flex;
-  justify-content: center;
-  margin-left: 20px;
-}
-#con3 > img {
-  height: 200px;
-}
-
-/* Media Queries for medium screen */
-
-@media all and (min-width: 600px) and (max-width: 811px) {
-  #git-stat-3 {
-    width: 50%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    align-items: center;
+  #projects .details h2{
+    font-size: 15px;
+    color: red;
+    text-align: center;
   }
+  #projects .details p{
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width:300px) {
+  
   #con1 > img,
   #con2 > img,
   #con3 > img {
-    width: 400px;
+    height: 150px;
+    width: 100vw;
+    margin-left: -5px;
   }
-  #stat-new {
-    margin-top: -10px;
-  }
-  .skills-list {
-    grid-template-columns: repeat(2, 1fr);
-    width: 90vw;
-  }
-}
 
-@media all and (max-width: 600px) {
-
-
-  .skills-list {
-    /* grid-template-columns: repeat(2, 1fr); */
-    width: 90vw;
+  #git-stat-3 #con1,
+  #git-stat-3 #con2 {
+    display: flex;
+    justify-content: center;
   }
-  #projects a{
-    margin-left: 15px;
-    padding: 20px;
+  #stat-new{
+    display: flex;
+    justify-content: center;
   }
   #git-stat-3 {
-    width: 90%;
+    width: 70%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* gap: 10px; */
     align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
   }
-  #con1 > img,
-  #con2 > img {
-    width: 300px;
-    margin-left: 20px;
+  .calendar{
+    width: 90vw;
   }
-  #con3 > img {
-    width: 300px;
-  }
-  #stat-new {
+  /* #stat-new {
     margin-top: -70px;
+  } */
+  #projects .details h2{
+    font-size: 15px;
+    color: red;
+    text-align: center;
   }
-}
+  #projects .details p{
+    font-size: 15px;
+  }
+  #projects .project{
+    width: 100vw;
+  }
+  #projects .details h3{
+    font-size: 15px;
+    color: red;
+    text-align: center;
+  }
+  #projects .details .button{
+    display: flex;
+    justify-content: space-between;
+  }
+  #projects .details .button a{
+    font-size: 15px;
+    color: red;
+    margin-left: 10px;
+    text-align: center;
+    height: 30px;
+  }
+  #hero img{
+    height: 150px;
+    width: 150px;
+  }
 
-@media all and (max-width:811px){
-  .skill-bottom {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 70%;
-    margin-top: 50px;
-    padding-bottom: 25px;
+  #hero h1{
+    font-size: 15px;
+  }
+
+  #hero .box{
+    font-size: 20px;
+  }
+  
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .left {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(198, 207, 214);
+  }
+  .right {
+    margin-top: 0px;
+    width: 100%;
+    padding: 10px;
+    /* padding-left: 50px; */
+  }
+  #footer .contactBox {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px;
+  }
+  .skills-list div{
+    width: 75vw;
+  }
+  .skills-list div h2{
+    font-size: 20px;
   }
 }
