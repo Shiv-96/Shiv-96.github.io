@@ -24,7 +24,7 @@ export default function App() {
         <Experience />
         <Skills />
         <Projects />
-        <Stats />
+        <Stats theme={theme} />
         <Contact />
       </main>
       <Footer />
