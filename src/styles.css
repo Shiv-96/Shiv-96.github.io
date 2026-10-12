@@ -15,7 +15,7 @@ a{color:inherit}img{max-width:100%;display:block}
 .logo{font:800 1.25rem var(--f1);text-decoration:none}
 .nav nav{display:flex;gap:1.4rem;align-items:center}.nav nav a{text-decoration:none;color:var(--mute)}.nav nav a:hover{color:var(--ink)}.nav nav .btn{color:var(--acink)}
 .nav-actions{display:flex;gap:.5rem}
-.icon{background:none;border:1px solid var(--line);color:var(--ink);border-radius:var(--r);padding:.35rem .8rem;cursor:pointer;font:inherit;font-size:.9rem}
+.icon{display:grid;place-items:center;width:40px;height:40px;padding:0;background:none;border:1px solid var(--line);color:var(--ink);border-radius:var(--r);cursor:pointer}.icon:hover{border-color:var(--ac);color:var(--ac)}
 .burger{display:none}
 .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center;min-height:calc(100vh - 64px);padding:3rem 0}
 .hello{color:var(--mute);margin:0 0 .3rem;font-size:1.2rem}
@@ -61,7 +61,7 @@ input,textarea{background:var(--bg2);border:1px solid var(--line);border-radius:
 .foot{padding:4rem 0 2rem;color:var(--mute);font-size:.92rem}
 @media(max-width:820px){
  .hero,.about-grid,.contact-grid,.skill-cols{grid-template-columns:1fr}.hero{min-height:auto}.photo{max-width:300px;order:-1;aspect-ratio:1}
- .burger{display:block}
+ .burger{display:grid}
  .nav nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;padding:1rem 1.25rem 1.4rem;background:var(--bg);border-bottom:1px solid var(--line)}.nav nav.open{display:flex}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
