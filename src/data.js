@@ -42,7 +42,7 @@ export const experience = [
 export const skills = [
   { group: 'Backend', items: ['Java', 'Spring Boot', 'Hibernate', 'Spring Data JPA', 'MySQL', 'REST APIs'] },
   { group: 'AI and data', items: ['Python', 'RAG pipelines', 'Prompt optimization', 'Data migration'] },
-  { group: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React'] },
+  { group: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Vite'] },
 ]
 
 export const tools = [
@@ -51,6 +51,12 @@ export const tools = [
 ]
 
 export const projects = [
+  {
+    title: 'Zafraan: Restaurant Website', type: 'frontend', img: 'zafraan.webp', note: 'Client-style concept project',
+    desc: 'A responsive website for a fictional Awadhi restaurant in Lucknow, with a filterable veg/non-veg menu, gallery lightbox, dark/light theme and online table booking through Netlify Forms (no backend).',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
+    links: [['GitHub', 'https://github.com/Shiv-96/zafraan-restaurant'], ['Live site', 'https://zafraan-lucknow.netlify.app/']],
+  },
   {
     title: 'Online Shopping Application', type: 'backend', img: 'online_shopping_application.png',
     desc: 'Spring Boot REST APIs with full CRUD for an online store, with separate access for Admin and Customer users.',
