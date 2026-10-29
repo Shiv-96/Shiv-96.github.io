@@ -3,7 +3,8 @@ import { projects } from '../data.js'
 const tabs = [['all', 'All'], ['backend', 'Backend'], ['frontend', 'Frontend']]
 export default function Projects() {
   const [f, setF] = useState('all')
-  const list = projects.filter((p) => f === 'all' || p.type === f)
+  // `type` is a string, or an array for projects that belong to several tabs (e.g. full-stack).
+  const list = projects.filter((p) => f === 'all' || [].concat(p.type).includes(f))
   return (
     <section id="projects" className="wrap section">
       <h2>Projects</h2>

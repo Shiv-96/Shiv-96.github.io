@@ -52,6 +52,12 @@ export const tools = [
 
 export const projects = [
   {
+    title: 'ResumeBuilder: AI Resume Builder', type: ['backend', 'frontend'], img: 'resume-builder.webp', note: 'Full-stack project',
+    desc: 'A full-stack resume builder with a live A4 preview, six templates and drag-and-drop sections. PDFs are rendered on the server with headless Chromium, so they match the preview and stay readable by ATS. An AI assistant rewrites content and scores the resume against a job description, and a server-side check discards suggestions that invent numbers.',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Playwright'],
+    links: [['GitHub', 'https://github.com/Shiv-96/resume-builder']],
+  },
+  {
     title: 'FORGE Studio: Fitness Studio Website', type: 'frontend', img: 'forge-studio.webp', note: 'Client-style concept project',
     desc: 'A bold, mobile-first website for a fictional gym in Pune, with a weekly class timetable you can filter by day and class, a live "next open class" card, a BMI calculator with WHO categories, membership plans with a monthly/quarterly/yearly switch and a free-trial booking form through Netlify Forms (no backend).',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
