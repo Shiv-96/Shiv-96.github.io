@@ -52,6 +52,12 @@ export const tools = [
 
 export const projects = [
   {
+    title: 'FORGE Studio: Fitness Studio Website', type: 'frontend', img: 'forge-studio.webp', note: 'Client-style concept project',
+    desc: 'A bold, mobile-first website for a fictional gym in Pune, with a weekly class timetable you can filter by day and class, a live "next open class" card, a BMI calculator with WHO categories, membership plans with a monthly/quarterly/yearly switch and a free-trial booking form through Netlify Forms (no backend).',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
+    links: [['GitHub', 'https://github.com/Shiv-96/forge-studio'], ['Live site', 'https://forge-studio-demo.netlify.app/']],
+  },
+  {
     title: 'Ira Sen: Photographer Portfolio', type: 'frontend', img: 'ira-sen.webp', note: 'Client-style concept project',
     desc: 'An editorial, image-first portfolio for a fictional wedding and travel photographer, with a filterable masonry gallery, an accessible lightbox (keyboard, swipe, focus trap), an automated AVIF/WebP image pipeline with blur placeholders and a validated booking form through Netlify Forms (no backend).',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
