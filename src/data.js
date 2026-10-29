@@ -55,7 +55,7 @@ export const projects = [
     title: 'Smile Harbor: Dental Clinic Website', type: 'frontend', img: 'smile-harbor.webp', note: 'Client-style concept project',
     desc: 'A fast, accessible website for a fictional dental clinic in Pune, with services and pricing, doctor profiles, a keyboard-friendly FAQ and an appointment form with validation and spam protection through Netlify Forms (no backend).',
     tech: ['Next.js', 'React', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
-    links: [['GitHub', 'https://github.com/Shiv-96/smile-harbor-dental-nextjs'], ['Live site', 'https://tiny-kelpie-d0392b.netlify.app/']],
+    links: [['GitHub', 'https://github.com/Shiv-96/smile-harbor-dental-nextjs'], ['Live site', 'https://smile-harbor-dental-care.netlify.app/']],
   },
   {
     title: 'Zafraan: Restaurant Website', type: 'frontend', img: 'zafraan.webp', note: 'Client-style concept project',
