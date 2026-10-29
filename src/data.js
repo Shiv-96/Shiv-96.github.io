@@ -76,12 +76,6 @@ export const projects = [
     links: [['GitHub', 'https://github.com/SubhadeepBid/Amusement-Park-Application'], ['Demo video', 'https://drive.google.com/file/d/1M_MO7uC3gaH2bgrjPWcy-fzk0NPRCKLf/view']],
   },
   {
-    title: 'Zara Clone', type: 'frontend', img: 'zara.png',
-    desc: 'An e-commerce storefront where visitors can browse and buy clothing.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
-    links: [['GitHub', 'https://github.com/Shiv-96/WEB-18-ZARA.COM-CLONE-WEBSITE-'], ['Live site', 'https://wonderful-bombolone-a5b620.netlify.app/']],
-  },
-  {
     title: 'Apollo 24X7 Clone', type: 'frontend', img: 'apollo.png', note: 'Team project',
     desc: 'A healthcare site with doctor booking and online consultation.',
     tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
