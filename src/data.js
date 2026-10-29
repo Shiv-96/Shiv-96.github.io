@@ -99,16 +99,4 @@ export const projects = [
     tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
     links: [['GitHub', 'https://github.com/ahmad-DS/WEB18-APOLLO24X7'], ['Live site', 'https://calm-alpaca-414005.netlify.app/']],
   },
-  {
-    title: 'DSA Revision Tracker', type: 'frontend', img: 'dsa.png',
-    desc: 'Track which DSA questions you have solved, flag the hard ones and come back to revise them.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
-    links: [['GitHub', 'https://github.com/Shiv-96/DSA_Revision'], ['Live site', 'https://keen-cendol-2d3bcd.netlify.app/']],
-  },
-  {
-    title: 'Calculator', type: 'frontend', img: 'calculator.png',
-    desc: 'A calculator for addition, subtraction, multiplication and division.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
-    links: [['GitHub', 'https://github.com/Shiv-96/Calculator'], ['Live site', 'https://kaleidoscopic-brigadeiros-a1712b.netlify.app/']],
-  },
 ]
