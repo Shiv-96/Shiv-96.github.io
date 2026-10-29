@@ -52,6 +52,12 @@ export const tools = [
 
 export const projects = [
   {
+    title: 'Ira Sen: Photographer Portfolio', type: 'frontend', img: 'ira-sen.webp', note: 'Client-style concept project',
+    desc: 'An editorial, image-first portfolio for a fictional wedding and travel photographer, with a filterable masonry gallery, an accessible lightbox (keyboard, swipe, focus trap), an automated AVIF/WebP image pipeline with blur placeholders and a validated booking form through Netlify Forms (no backend).',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
+    links: [['GitHub', 'https://github.com/Shiv-96/ira-sen-photography'], ['Live site', 'https://ira-sen-photography.netlify.app/']],
+  },
+  {
     title: 'Echoleaf: SaaS Landing Page', type: 'frontend', img: 'echoleaf.webp', note: 'Client-style concept project',
     desc: 'A conversion-focused landing page for a fictional customer-feedback SaaS, with an accessible monthly/yearly pricing switch, light/dark theme without flash, scroll animations that respect reduced motion and an early-access signup through Netlify Forms (no backend).',
     tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
