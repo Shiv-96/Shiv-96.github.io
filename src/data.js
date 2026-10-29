@@ -52,6 +52,12 @@ export const tools = [
 
 export const projects = [
   {
+    title: 'Echoleaf: SaaS Landing Page', type: 'frontend', img: 'echoleaf.webp', note: 'Client-style concept project',
+    desc: 'A conversion-focused landing page for a fictional customer-feedback SaaS, with an accessible monthly/yearly pricing switch, light/dark theme without flash, scroll animations that respect reduced motion and an early-access signup through Netlify Forms (no backend).',
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
+    links: [['GitHub', 'https://github.com/Shiv-96/echoleaf-saas-landing'], ['Live site', 'https://echoleaf-landing.netlify.app/']],
+  },
+  {
     title: 'Smile Harbor: Dental Clinic Website', type: 'frontend', img: 'smile-harbor.webp', note: 'Client-style concept project',
     desc: 'A fast, accessible website for a fictional dental clinic in Pune, with services and pricing, doctor profiles, a keyboard-friendly FAQ and an appointment form with validation and spam protection through Netlify Forms (no backend).',
     tech: ['Next.js', 'React', 'Tailwind CSS', 'Netlify Forms', 'SEO'],
