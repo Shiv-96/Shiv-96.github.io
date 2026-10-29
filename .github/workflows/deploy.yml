@@ -2,6 +2,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Rebuild once a day so the GitHub activity cards stay up to date.
+  schedule:
+    - cron: "30 3 * * *"
   workflow_dispatch:
 permissions:
   contents: read
@@ -10,11 +13,52 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: true
+env:
+  # Colors for the GitHub activity cards, matching the site's dark and light themes.
+  STATS_DARK: title_color=ffb454&text_color=e8edf6&icon_color=ffb454&ring_color=ffb454&bg_color=00000000
+  STATS_LIGHT: title_color=1f4fd8&text_color=101a2e&icon_color=1f4fd8&ring_color=1f4fd8&bg_color=00000000
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Generate the GitHub activity cards at build time instead of loading them from the
+      # shared public stats server, which is often rate limited and returns no image.
+      # If a card fails, the site still deploys and the card is simply hidden.
+      - name: Generate stats card (dark)
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=Shiv-96&show_icons=true&hide_border=true&${{ env.STATS_DARK }}
+          path: public/stats/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate stats card (light)
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=Shiv-96&show_icons=true&hide_border=true&${{ env.STATS_LIGHT }}
+          path: public/stats/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate top languages card (dark)
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=Shiv-96&layout=compact&hide_border=true&${{ env.STATS_DARK }}
+          path: public/stats/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate top languages card (light)
+        continue-on-error: true
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=Shiv-96&layout=compact&hide_border=true&${{ env.STATS_LIGHT }}
+          path: public/stats/top-langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20

@@ -1,16 +1,19 @@
-const u = 'Shiv-96'
-const colors = {
-  dark: 'title_color=ffb454&text_color=e8edf6&icon_color=ffb454&ring_color=ffb454&bg_color=00000000',
-  light: 'title_color=1f4fd8&text_color=101a2e&icon_color=1f4fd8&ring_color=1f4fd8&bg_color=00000000',
-}
+/**
+ * Stats
+ * GitHub activity cards. The SVG files are generated during the deploy workflow
+ * (.github/workflows/deploy.yml) into public/stats/, one per theme, so the page
+ * does not depend on the shared public stats server. A card that is missing is hidden.
+ */
+const hideOnError = (e) => (e.currentTarget.style.display = 'none')
+
 export default function Stats({ theme }) {
-  const c = colors[theme] || colors.dark
+  const t = theme === 'light' ? 'light' : 'dark'
   return (
     <section className="wrap section">
       <h2>GitHub activity</h2>
       <div className="stats">
-        <img loading="lazy" alt="GitHub stats" src={`https://github-readme-stats.vercel.app/api?username=${u}&show_icons=true&hide_border=true&${c}`} />
-        <img loading="lazy" alt="Top languages" src={`https://github-readme-stats.vercel.app/api/top-langs?username=${u}&layout=compact&hide_border=true&${c}`} />
+        <img loading="lazy" alt="GitHub stats" src={`/stats/stats-${t}.svg`} onError={hideOnError} />
+        <img loading="lazy" alt="Top languages" src={`/stats/top-langs-${t}.svg`} onError={hideOnError} />
       </div>
     </section>
   )
